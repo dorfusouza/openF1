@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bortoleto F1 Dashboard | Audi #5</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="driver-info">
+            <span class="country-flag">🇧🇷</span>
+            <h1>GABRIEL <span class="bold-it">BORTOLETO</span></h1>
+            <span class="driver-number">5</span>
+        </div>
+        <div class="session-badge" id="session-info">LOCALIZANDO SESSÃO...</div>
+    </header>
+
+    <main class="dashboard-grid">
+        <section class="telemetry-panel">
+            <div class="live-stats">
+                <div class="stat-card">
+                    <label>SPEED</label>
+                    <div class="value-group">
+                        <span id="speed-value" class="value">0</span>
+                        <span class="unit">KM/H</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <label>GEAR</label>
+                    <div id="gear-value" class="value">N</div>
+                </div>
+                <div class="stat-card">
+                    <label>RPM</label>
+                    <div id="rpm-value" class="value">0</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="telemetryChart"></canvas>
+            </div>
+        </section>
+
+        <section class="track-panel">
+            <div class="card map-card">
+                <div class="card-header">LIVE TRACK POSITION</div>
+                <canvas id="trackMap"></canvas>
+            </div>
+            
+            <div id="radio-alert" class="radio-card">
+                <div class="radio-icon">📻</div>
+                <div class="radio-content">
+                    <label>TEAM RADIO</label>
+                    <p id="radio-text">SILENCE</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
