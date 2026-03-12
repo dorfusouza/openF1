@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bortoleto F1 Dashboard | Audi #5</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <header class="main-header">
         <div class="driver-info">
@@ -17,6 +20,31 @@
         </div>
         <div class="session-badge" id="session-info">LOCALIZANDO SESSÃO...</div>
     </header>
+
+    <section class="filters-panel">
+        <div class="card filter-card">
+            <div class="card-header">HISTÓRICO DE DADOS</div>
+            <div class="dropdown-group">
+                <div class="select-box">
+                    <label>GRANDE PRÊMIO</label>
+                    <select title="gp" id="select-gp">
+                        <option value="">Selecione o GP...</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <label>SESSÃO</label>
+                    <select id="select-session" disabled>
+                        <option value="">Aguardando GP...</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <label>STATUS / DATA</label>
+                    <div id="session-status" class="status-info">-</div>
+                </div>
+            </div>
+            <button id="btn-load-data" class="f1-button" disabled>CARREGAR TELEMETRIA</button>
+        </div>
+    </section>
 
     <main class="dashboard-grid">
         <section class="telemetry-panel">
@@ -48,7 +76,7 @@
                 <div class="card-header">LIVE TRACK POSITION</div>
                 <canvas id="trackMap"></canvas>
             </div>
-            
+
             <div id="radio-alert" class="radio-card">
                 <div class="radio-icon">📻</div>
                 <div class="radio-content">
@@ -61,4 +89,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
