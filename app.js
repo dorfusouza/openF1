@@ -194,7 +194,7 @@ async function main() {
     loadRaceHistory();
     setupHistoryFilters();
 
-    setInterval(() => updateData(sKey), 1000);
+    setInterval(() => updateData(sKey), 5000);
 }
 
 async function loadRaceHistory() {
